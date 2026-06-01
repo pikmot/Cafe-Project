@@ -1,0 +1,22 @@
+@use "./colors" as c;
+@use "./typography" as t;
+
+%primary-font-white {
+  color: c.$brand-white;
+  font-family: t.$text-primary-font;
+}
+
+%primary-font-pink {
+  color: c.$brand-dark-pink;
+  font-family: t.$text-primary-font;
+}
+
+%secondary-font-white {
+  color: c.$brand-white;
+  font-family: t.$text-secondary-font;
+}
+
+%secondary-font-dark-grey {
+  color: c.$brand-dark-grey;
+  font-family: t.$text-secondary-font;
+}

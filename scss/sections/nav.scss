@@ -1,0 +1,12 @@
+@use "../partials/mixins";
+
+.nav {
+  @include mixins.dimension();
+  @include mixins.content-flexbox(row, space-between);
+
+  &__links {
+    @include mixins.dimension(30vw);
+    @include mixins.content-flexbox(row, space-around);
+    list-style: none;
+  }
+}

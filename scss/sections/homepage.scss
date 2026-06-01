@@ -1,0 +1,38 @@
+@use "../partials/colors" as c;
+@use "../partials/mixins";
+
+.homepage {
+  @include mixins.dimension(100%, 58vh);
+  background-color: c.$brand-dark-green;
+
+  @include mixins.content-flexbox(row, center, center);
+
+  padding: 0;
+
+  &-left-page {
+    @include mixins.content-flexbox(column, center, start);
+  }
+
+  &-img {
+    background-image: url(./images/images/hero_image.jpg);
+
+    @include mixins.dimension(50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-btn {
+    width: 35%;
+
+    background-color: c.$brand-dark-green;
+    border: 3px solid c.$brand-white;
+    margin: 10px 50px;
+    text-align: center;
+    padding: 10px 25px;
+
+    font-size: 150%;
+
+    text-decoration: none;
+  }
+}

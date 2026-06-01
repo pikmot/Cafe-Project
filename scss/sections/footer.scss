@@ -1,0 +1,24 @@
+@use "../partials/colors" as c;
+@use "../partials/placeholders" as p;
+@use "../partials/mixins";
+
+.footer {
+  @include mixins.dimension(100%, 25%);
+
+  background-color: c.$brand-light-green;
+
+  @include mixins.content-flexbox(row, space-between, center);
+  &-container {
+    @include mixins.dimension(25%);
+
+    @include mixins.content-flexbox();
+
+    &-text {
+      @extend %secondary-font-white;
+      font-weight: 100;
+    }
+    &-right {
+      margin-left: 50%;
+    }
+  }
+}

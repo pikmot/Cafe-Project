@@ -1,0 +1,89 @@
+@use "./scss/partials/normalize";
+@use "./scss/partials/colors" as c;
+@use "./scss/partials/typography" as t;
+@use "./scss/partials/placeholders" as p;
+
+@use "./scss/sections/nav";
+@use "./scss/sections/homepage";
+@use "./scss/sections/menu";
+@use "./scss/sections/review";
+@use "./scss/sections/footer";
+
+@use "./scss/partials/mixins";
+
+// * {
+//   border: 1px solid c.$brand-red;
+// }
+
+.header {
+  @include mixins.dimension(50%);
+
+  &-Rammetto-One-white {
+    @extend %primary-font-white;
+
+    font-size: 350%;
+    text-align: center;
+
+    margin: 5% 0 0 0;
+    &-left {
+      width: 80%;
+
+      @extend %primary-font-white;
+
+      font-size: 300%;
+      margin: 50px 50px 25px 50px;
+
+      @include mixins.content-flexbox(column);
+    }
+  }
+  &-Rammetto-One-pink {
+    @extend %primary-font-pink;
+
+    font-size: 350%;
+    text-align: center;
+  }
+}
+
+.p {
+  &-OpenSans {
+    font-size: 200%;
+
+    &-white {
+      @include mixins.dimension(40vw);
+
+      @extend %secondary-font-white;
+
+      font-size: 150%;
+      font-weight: 100%;
+
+      margin: 0px 0px 25px 50px;
+      padding-top: 0px;
+
+      &-bold {
+        @extend %secondary-font-white;
+        font-size: 150%;
+        font-weight: bold;
+      }
+    }
+
+    &-black {
+      font-size: 100%;
+      @extend %secondary-font-dark-grey;
+
+      &-bold {
+        @extend %secondary-font-dark-grey;
+        font-size: 100%;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.img {
+  @include mixins.dimension();
+
+  &-flip {
+    transform: scaleX(-1);
+    margin: 1%;
+  }
+}

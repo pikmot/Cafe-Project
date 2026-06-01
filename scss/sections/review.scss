@@ -1,0 +1,68 @@
+@use "../partials/colors" as c;
+@use "../partials/placeholders" as p;
+@use "../partials/mixins";
+
+.review {
+  @include mixins.dimension(100%, 35%);
+
+  background-color: c.$brand-dark-pink;
+
+  @include mixins.content-flexbox();
+
+  @include mixins.content-wrap(flex-start);
+
+  row-gap: 20px;
+  column-gap: 30px;
+
+  padding-bottom: 20px;
+
+  &-card {
+    @include mixins.dimension(45%, 15%);
+
+    border: 3px solid c.$brand-white;
+
+    @include mixins.content-flexbox();
+
+    @include mixins.content-wrap(start);
+
+    &-p {
+      @include mixins.dimension(75%);
+
+      @extend %secondary-font-dark-grey;
+
+      text-align: center;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    &-quote {
+      &-left {
+        align-self: start;
+        margin-top: 2%;
+        margin-left: 2%;
+      }
+      &-right {
+        align-self: end;
+        margin-bottom: 2%;
+        margin-right: 2%;
+      }
+    }
+
+    &-extra {
+      @include mixins.dimension();
+      @include mixins.content-flexbox(row, space-between);
+
+      &-content {
+        @include mixins.dimension(25%);
+
+        text-align: center;
+
+        @extend %secondary-font-dark-grey;
+
+        font-weight: 100;
+
+        margin: 0 0 2% 0;
+      }
+    }
+  }
+}

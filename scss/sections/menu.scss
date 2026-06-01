@@ -1,0 +1,104 @@
+@use "../partials/colors" as c;
+@use "../partials/placeholders" as p;
+@use "../partials/mixins";
+
+details {
+  @include mixins.dimension(90%);
+
+  & summary {
+    background-color: c.$brand-light-pink;
+    padding: 15px;
+
+    font-weight: 900;
+    font-size: 150%;
+    @extend %secondary-font-dark-grey;
+
+    &::marker {
+      color: c.$brand-dark-grey;
+      font-size: 1.25em;
+    }
+  }
+}
+
+.menu {
+  @include mixins.dimension();
+
+  @include mixins.content-flexbox(column);
+
+  row-gap: 25px;
+
+  margin: 0% 0% 5% 0%;
+
+  &-dropdown {
+    padding-top: 15px;
+
+    @include mixins.content-flexbox(row, space-between, flex-start);
+
+    @include mixins.content-wrap();
+
+    gap: 15px;
+
+    @extend %secondary-font-dark-grey;
+
+    font-weight: 900;
+    font-size: 150%;
+
+    &-card {
+      @include mixins.dimension(31%, 25%);
+      background-color: c.$brand-light-pink;
+
+      @include mixins.content-flexbox();
+
+      @include mixins.content-wrap();
+
+      &-left {
+        margin-right: auto;
+      }
+      &-right {
+        margin-left: auto;
+      }
+
+      &-img {
+        @include mixins.dimension(90%, 20vh);
+
+        margin-top: 1vh;
+      }
+      &-title {
+        @include mixins.dimension();
+
+        text-align: center;
+        font-size: 70%;
+
+        @extend %secondary-font-dark-grey;
+
+        font-weight: bold;
+
+        margin: 0;
+        padding: 10px 0 10px 0;
+      }
+      &-classification {
+        @include mixins.dimension(100%, 10%);
+
+        @include mixins.content-flexbox();
+        @include mixins.content-wrap();
+
+        @extend %secondary-font-dark-grey;
+
+        column-gap: 5px;
+
+        &-item {
+          @include mixins.dimension(fit-content);
+          @include mixins.content-flexbox();
+
+          font-weight: 400;
+          font-size: 45%;
+
+          margin: 0;
+          padding: 0;
+
+          gap: 5px;
+        }
+      }
+    }
+  }
+}
