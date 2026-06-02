@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./outputStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rammetto+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <header>
+    <nav class="nav">
+      <img
+        class="img-flip"
+        src="./images/icons/mug-hot-solid-pink.png"
+        width="50em"
+        height="50em"
+      />
+      <div>
+        <ul class="nav__links">
+          <li class="p-OpenSans-black-bold">
+            <a>ABOUT</a>
+          </li>
+          <li class="p-OpenSans-black-bold">
+            <a href="./Assessment.html" class="link">HOME</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <main>
+      <form class="contact">
+        <div>
+          <label class="contact-text" for="fname">FIRST NAME:</label><br />
+          <input
+            class="contact-field"
+            type="text"
+            id="fname"
+            name="fname"
+            required
+          /><br />
+        </div>
+        <div>
+          <label class="contact-text" for="email">EMAIL:</label><br />
+          <input
+            class="contact-field"
+            type="email"
+            id="email"
+            name="email"
+            required
+          /><br />
+        </div>
+        <div>
+          <label class="contact-text" for="options">TYPE:</label><br />
+          <select class="contact-field" name="options" id="options" required>
+            <option disabled selected hidden value="">
+              Please Select Topic
+            </option>
+            <option value="Book">Bookings</option>
+            <option value="Order">Online orders</option>
+            <option value="Issue">Complaints</option>
+          </select>
+          <br />
+        </div>
+        <div>
+          <label class="contact-text" for="text">Description</label><br />
+          <textarea
+            class="contact-field"
+            id="text"
+            name="text"
+            required
+          ></textarea>
+          <br />
+        </div>
+        <div>
+          <button class="contact-text" type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

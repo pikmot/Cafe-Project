@@ -8,12 +8,13 @@
 @use "./scss/sections/menu";
 @use "./scss/sections/review";
 @use "./scss/sections/footer";
+@use "./scss/sections/contact.scss";
 
 @use "./scss/partials/mixins";
 
-// * {
-//   border: 1px solid c.$brand-red;
-// }
+* {
+  // border: 1px solid c.$brand-red;
+}
 
 .header {
   @include mixins.dimension(50%);
@@ -41,6 +42,12 @@
 
     font-size: 350%;
     text-align: center;
+  }
+  &-Contact-title {
+    @include mixins.dimension();
+    text-align: center;
+
+    font-size: 500%;
   }
 }
 
@@ -86,4 +93,9 @@
     transform: scaleX(-1);
     margin: 1%;
   }
+}
+
+.link {
+  text-decoration: none;
+  color: c.$brand-dark-grey;
 }
