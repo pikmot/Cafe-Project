@@ -2,6 +2,8 @@
 
 Project involves replicating an existing HTML/CSS project without the need for Javascript.
 
+<a href="https://pikmot.github.io/Cafe-Project/">---> CHECKOUT WEBSITE HERE <---</a>
+
 Original HomePage | Menu Before | Menu After
 
 <img src="./gitImg/LandingPage.png" width="%">
@@ -42,7 +44,9 @@ Recreate the provided project using HTML, CSS and SCSS.
 
 ### Tech Stack
 
--[x] HTML <br> -[x] CSS <br> -[x] SCSS
+- [x] HTML
+- [x] CSS
+- [x] SCSS
 
 ### Issues/Questions
 
