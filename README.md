@@ -72,3 +72,4 @@ Recreate the provided project using HTML, CSS and SCSS.
 - Units used follow vh&vw -> % -> px,em,rem by top down
 - Importing images and fonts can be done via different methods
 - Mixins, placeholders cuts down repeatable code
+- Media Queries are essential
